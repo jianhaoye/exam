@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script  src="./js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./css/jquery-ui.min.css" type="text/css" />
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+
+  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $('button').button().click(function(){
+      $('div').toggle("shake",1000,function(){
+
+      })
+    })
+  });
+  </script>
+</head>
+<body>
+<button>显示/消失</button>
+<hr>
+<div></div>
+</body>
+</html>

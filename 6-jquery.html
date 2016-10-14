@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+       p {
+         color: red;
+      }
+    </style>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css" type="text/css"/>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#dialog').dialog({
+          buttons:[{text: "√ 确定",click:function() {$(this).dialog("close")}},
+          {text: "×取消",click:function() {$(this).dialog("close")}},
+        ],　　
+          modal: true,
+          autoOpen: false
+        })
+
+        $('#look').button().click(function(){
+          $('#dialog').dialog("open");
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <button id="look">单击这里</button>
+    <hr>
+    <div id="dialog" title="警告"><p>你确定删除你所在的文件吗？</p></div>
+  </body>
+</html>
